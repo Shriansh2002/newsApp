@@ -20,14 +20,21 @@ function App() {
 						content={{
 							title: 'Business 💼',
 							apiTitle: 'business',
-							count: 5,
+							count: 3,
 						}}
 					/>
 					<FeaturedSection
 						content={{
 							title: 'Bollywood 🎥',
 							apiTitle: 'Bollywood',
-							count: 5,
+							count: 4,
+						}}
+					/>
+					<FeaturedSection
+						content={{
+							title: 'Entertainment',
+							apiTitle: 'entertainment',
+							count: 4,
 						}}
 					/>
 				</div>
