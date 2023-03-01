@@ -21,7 +21,7 @@ const NewsSection = () => {
 			<div className="container mx-auto">
 				<h2 className="text-3xl font-bold mb-8">Latest News</h2>
 				<LatestNewsTopSection />
-				<div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
+				<div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
 					{newsData.map((article, _idx) => (
 						<NewsCard article={article} key={_idx} />
 					))}

@@ -44,7 +44,7 @@ function Header() {
 				<div className="flex items-center">
 					<a href="/">
 						<img
-							src="https://english.cdn.zeenews.com/static/public/zeenews-hindi.svg"
+							src="/logo.png"
 							alt="Zee News logo"
 							className="w-24"
 						/>

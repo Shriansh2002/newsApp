@@ -3,6 +3,7 @@ import {
 	BreakingNewsSection,
 	NewsSection,
 	FeaturedSection,
+	Footer,
 } from './components';
 
 function App() {
@@ -29,15 +30,9 @@ function App() {
 							count: 5,
 						}}
 					/>
-					<FeaturedSection
-						content={{
-							title: 'Sports 🏅',
-							apiTitle: 'Sports',
-							count: 5,
-						}}
-					/>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 }
