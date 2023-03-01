@@ -4,19 +4,23 @@ import { WeatherCard } from './';
 function BreakingNewsSection() {
 	const [weatherData, setWeatherData] = useState(null);
 
-	// useEffect(() => {
-	// 	const fetchWeatherData = async () => {
-	// 		let API_KEY = '';
-
-	// 		let weeklyWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=28.704060&lon=77.102493&appid=${API_KEY}`;
-
-	// 		await fetch(weeklyWeatherUrl).then((response) =>
-	// 			console.log(response.json())
-	// 		);
-	// 	};
-
-	// 	fetchWeatherData();
-	// }, []);
+	useEffect(() => {
+		fetch(
+			'https://api.weatherapi.com/v1/current.json?key=cc26a7593b0e429389791432230103&q=Noida'
+		)
+			.then((res) => res.json())
+			.then((data) => {
+				setWeatherData({
+					city: data.location.name,
+					temperature: data.current.temp_c,
+					weatherIcon: data.current.condition.icon,
+					description: data.current.condition.text,
+				});
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	}, []);
 
 	return (
 		<section className="py-20">

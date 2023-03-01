@@ -2,8 +2,8 @@ import React from 'react';
 
 const WeatherCard = ({ city, temperature, weatherIcon, description }) => {
 	return (
-		<div className="bg-gray-100 rounded-lg shadow-md p-4">
-			<h2 className="text-lg font-medium mb-2">{city}</h2>
+		<div className="bg-gray-100 rounded-lg w-56 p-4">
+			<h2 className="text-lg mb-2 text-center font-bold">{city}</h2>
 			<div className="flex items-center mb-4">
 				<img
 					src={weatherIcon}
