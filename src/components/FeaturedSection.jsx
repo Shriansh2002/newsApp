@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const FeaturedSection = ({ content }) => {
+	const [newsTitles, setNewsTitles] = useState([]);
+
+	useEffect(() => {
+		const fetchData = async () => {
+			const res = await fetch(
+				`https://inshorts.deta.dev/news?category=${content.apiTitle.toLowerCase()}`
+			);
+			const data = await res.json();
+			setNewsTitles(data.data);
+		};
+		fetchData();
+	}, []);
+
+	newsTitles.length = content.count;
+
 	return (
 		<div className="bg-white py-8">
 			<div className="container mx-auto">
@@ -8,13 +23,11 @@ const FeaturedSection = ({ content }) => {
 					{content.title}
 				</h2>
 				<ul className="flex flex-col gap-2 text-gray-500 ml-4">
-					{...Array(content.count)
-						.fill()
-						.map((_, idx) => (
-							<li className="p-2 rounded-lg list-disc ">
-								News 1 description
-							</li>
-						))}
+					{newsTitles.map((item, _idx) => (
+						<li key={_idx} className="p-2 rounded-lg list-disc ">
+							{item.title}
+						</li>
+					))}
 				</ul>
 			</div>
 		</div>

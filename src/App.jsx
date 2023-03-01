@@ -17,19 +17,22 @@ function App() {
 				<div className="w-1/5">
 					<FeaturedSection
 						content={{
-							title: 'Trending Topics 🔥',
+							title: 'Business 💼',
+							apiTitle: 'business',
 							count: 5,
 						}}
 					/>
 					<FeaturedSection
 						content={{
-							title: 'Bollywood 💃',
+							title: 'Bollywood 🎥',
+							apiTitle: 'Bollywood',
 							count: 5,
 						}}
 					/>
 					<FeaturedSection
 						content={{
 							title: 'Sports 🏅',
+							apiTitle: 'Sports',
 							count: 5,
 						}}
 					/>

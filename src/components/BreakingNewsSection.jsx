@@ -2,26 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { WeatherCard } from './';
 
 function BreakingNewsSection() {
-	const city = '42.3478, -71.0466';
 	const [weatherData, setWeatherData] = useState(null);
 
-	useEffect(() => {
-		const fetchWeatherData = async () => {
-			const response = await fetch(
-				`https://api.openweathermap.org/data/2.5/weather?lat=${
-					city.split(',')[0]
-				}&lon=${city.split(',')[1]}&units=imperial&appid=${
-					process.env.REACT_APP_WEATHER_API_KEY
-				}`
-			);
-			const data = await response.json();
-			console.log(data);
-		};
+	// useEffect(() => {
+	// 	const fetchWeatherData = async () => {
+	// 		let API_KEY = '';
 
-		fetchWeatherData();
-	}, []);
+	// 		let weeklyWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=28.704060&lon=77.102493&appid=${API_KEY}`;
 
-	// console.log(weatherData);
+	// 		await fetch(weeklyWeatherUrl).then((response) =>
+	// 			console.log(response.json())
+	// 		);
+	// 	};
+
+	// 	fetchWeatherData();
+	// }, []);
 
 	return (
 		<section className="py-20">
