@@ -103,7 +103,7 @@ function Header() {
 			{showMenu && (
 				<div className="bg-gray-800">
 					<div className="container mx-auto px-6 py-3">
-						<ul className="md:hidden flex flex-col items-center">
+						<ul className="md:hidden flex flex-col items-center text-white">
 							<li className="my-3">
 								<a href="/india" className="hover:underline">
 									India

@@ -11,11 +11,11 @@ function App() {
 		<div className="App">
 			<Header />
 			<BreakingNewsSection />
-			<div className="container flex mx-auto gap-12">
-				<div className="w-4/5">
+			<div className="container flex flex-col md:flex-row mx-auto gap-12">
+				<div className="w-full md:w-4/5">
 					<NewsSection />
 				</div>
-				<div className="w-1/5">
+				<div className="w-full md:w-1/5">
 					<FeaturedSection
 						content={{
 							title: 'Business 💼',
