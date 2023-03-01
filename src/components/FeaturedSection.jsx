@@ -24,9 +24,14 @@ const FeaturedSection = ({ content }) => {
 				</h2>
 				<ul className="flex flex-col gap-2 text-gray-500 ml-4">
 					{newsTitles.map((item, _idx) => (
-						<li key={_idx} className="p-2 rounded-lg list-disc ">
+						<a
+							href={item.readMoreUrl}
+							target="_blank"
+							key={_idx}
+							className="p-2 text-xs rounded-lg list-disc "
+						>
 							{item.title}
-						</li>
+						</a>
 					))}
 				</ul>
 			</div>

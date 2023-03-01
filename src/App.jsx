@@ -37,6 +37,13 @@ function App() {
 							count: 4,
 						}}
 					/>
+					<FeaturedSection
+						content={{
+							title: 'Sports',
+							apiTitle: 'sports',
+							count: 4,
+						}}
+					/>
 				</div>
 			</div>
 			<Footer />
