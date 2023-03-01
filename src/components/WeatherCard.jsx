@@ -1,20 +1,23 @@
 import React from 'react';
 
-const WeatherCard = ({ city, temperature, weather, icon }) => {
+const WeatherCard = ({ city, temperature, weatherIcon, description }) => {
 	return (
-		<div className="bg-white rounded-lg shadow-lg p-4">
-			<div className="flex items-center justify-between gap-4 mb-4">
-				<h3 className="font-bold text-lg">{city}</h3>
-				<div className="flex items-center">
-					<div className="text-gray-700">{weather}</div>
+		<div className="bg-gray-100 rounded-lg shadow-md p-4">
+			<h2 className="text-lg font-medium mb-2">{city}</h2>
+			<div className="flex items-center mb-4">
+				<img
+					src={weatherIcon}
+					alt={description}
+					className="w-12 h-12 mr-4"
+				/>
+				<div>
+					<span className="text-2xl font-semibold">
+						{temperature}°C
+					</span>
+					<p>{description}</p>
 				</div>
-			</div>
-			<div className="flex items-center justify-between">
-				<p className="text-3xl font-bold">{temperature}&deg;</p>
-				<img src={icon} alt={weather} className="w-10 h-10" />
 			</div>
 		</div>
 	);
 };
-
 export default WeatherCard;
