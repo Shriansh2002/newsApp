@@ -3,7 +3,7 @@ import React from 'react';
 function BreakingNewsSection() {
 	return (
 		<section className="py-20">
-			<div className="container mx-auto px-6">
+			<div className="container mx-auto px-6 py-4">
 				<h2 className="text-4xl font-bold mb-2">Breaking News</h2>
 				<h3 className="text-2xl mb-8">
 					Stay up-to-date with the latest news from around the world.

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { LatestNewsTopSection, NewsCard } from './';
 
 const NewsSection = () => {
 	const [newsData, setNewsData] = useState([
@@ -53,10 +54,11 @@ const NewsSection = () => {
 	]);
 
 	return (
-		<div className="bg-white py-8">
+		<div className="bg-white py-4">
 			<div className="container mx-auto">
 				<h2 className="text-3xl font-bold mb-8">Latest News</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<LatestNewsTopSection />
+				<div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
 					{newsData.map((article, _idx) => (
 						<NewsCard article={article} key={_idx} />
 					))}
@@ -67,28 +69,3 @@ const NewsSection = () => {
 };
 
 export default NewsSection;
-
-const NewsCard = ({ article }) => {
-	return (
-		<div className="p-2 bg-white rounded-lg border border-b-2 overflow-hidden">
-			<div className="h-40 w-full bg-gray-200 overflow-hidden hover:scale-110 transition duration-400">
-				<img
-					src={article.image}
-					alt={article.title}
-					className="w-full h-full object-cover object-center transition duration-300 hover:opacity-75"
-				/>
-			</div>
-			<div className="p-4">
-				<h3 className="text-md font-bold mb-2">{article.title}</h3>
-				<p className="text-sm text-gray-500 text-justify">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-					Veniam error reprehenderit laboriosam suscipit est totam
-					dolore ducimus, a eius tenetur voluptates magnam omnis
-					debitis cum! Officia ab debitis asperiores aspernatur ad,
-					voluptatum quibusdam culpa recusandae eaque accusamus nulla
-					ut aperiam?
-				</p>
-			</div>
-		</div>
-	);
-};
