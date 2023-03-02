@@ -1,11 +1,5 @@
 import { useParams } from 'react-router-dom';
-import {
-	Header,
-	BreakingNewsSection,
-	NewsSection,
-	FeaturedSection,
-	Footer,
-} from '../components';
+import { Header, NewsPageHeroSection } from '../components';
 
 const NewsPage = () => {
 	const { newsId } = useParams();
@@ -13,6 +7,7 @@ const NewsPage = () => {
 	return (
 		<div className="Newspage">
 			<Header />
+			<NewsPageHeroSection newsId={newsId} />
 		</div>
 	);
 };
