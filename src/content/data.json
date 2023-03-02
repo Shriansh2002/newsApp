@@ -1,31 +1,31 @@
 {
 	"data": [
 		{
-			"link": "/india",
+			"link": "/news/india",
 			"name": "India"
 		},
 		{
-			"link": "/world",
+			"link": "/news/world",
 			"name": "World"
 		},
 		{
-			"link": "/business",
+			"link": "/news/business",
 			"name": "Business"
 		},
 		{
-			"link": "/entertainment",
+			"link": "/news/entertainment",
 			"name": "Entertainment"
 		},
 		{
-			"link": "/sports",
+			"link": "/news/sports",
 			"name": "Sports"
 		},
 		{
-			"link": "/health",
+			"link": "/news/health",
 			"name": "Health"
 		},
 		{
-			"link": "/science",
+			"link": "/news/science",
 			"name": "Science"
 		}
 	]
