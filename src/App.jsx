@@ -32,14 +32,14 @@ function App() {
 					/>
 					<FeaturedSection
 						content={{
-							title: 'Entertainment',
+							title: 'Entertainment 🎭',
 							apiTitle: 'entertainment',
 							count: 4,
 						}}
 					/>
 					<FeaturedSection
 						content={{
-							title: 'Sports',
+							title: 'Sports ⚽',
 							apiTitle: 'sports',
 							count: 4,
 						}}

@@ -23,7 +23,7 @@ function BreakingNewsSection() {
 	}, []);
 
 	return (
-		<section className="py-20">
+		<section className="py-10">
 			<div className="container flex items-center justify-between mx-auto px-6 py-3">
 				<div>
 					<h2 className="text-4xl font-bold mb-2">Breaking News</h2>
@@ -38,16 +38,18 @@ function BreakingNewsSection() {
 						Read More
 					</a>
 				</div>
-				{weatherData ? (
-					<WeatherCard
-						city={weatherData.city}
-						temperature={weatherData.temperature}
-						weatherIcon={weatherData.weatherIcon}
-						description={weatherData.description}
-					/>
-				) : (
-					<Loader />
-				)}
+				<div className="hidden md:block">
+					{weatherData ? (
+						<WeatherCard
+							city={weatherData.city}
+							temperature={weatherData.temperature}
+							weatherIcon={weatherData.weatherIcon}
+							description={weatherData.description}
+						/>
+					) : (
+						<Loader />
+					)}
+				</div>
 			</div>
 		</section>
 	);
