@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { data } from '../../content/data.json';
 
 function Header() {
 	const [showMenu, setShowMenu] = useState(false);
@@ -7,36 +8,7 @@ function Header() {
 		setShowMenu(!showMenu);
 	};
 
-	const listOfItems = [
-		{
-			link: '/india',
-			name: 'India',
-		},
-		{
-			link: '/world',
-			name: 'World',
-		},
-		{
-			link: '/business',
-			name: 'Business',
-		},
-		{
-			link: '/entertainment',
-			name: 'Entertainment',
-		},
-		{
-			link: '/sports',
-			name: 'Sports',
-		},
-		{
-			link: '/health',
-			name: 'Health',
-		},
-		{
-			link: '/science',
-			name: 'Science',
-		},
-	];
+	const listOfItems = data;
 
 	return (
 		<header className="bg-white text-black">

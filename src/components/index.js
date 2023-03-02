@@ -11,3 +11,5 @@ export { default as WeatherCard } from './Homepage/WeatherCard';
 
 
 export { default as NewsPageHeroSection } from './NewsPage/NewsPageHeroSection';
+export { default as NewsContainer } from './NewsPage/NewsContainer';
+export { default as NewsPageCard } from './NewsPage/NewsPageCard';

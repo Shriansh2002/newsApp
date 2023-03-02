@@ -1,0 +1,32 @@
+{
+	"data": [
+		{
+			"link": "/india",
+			"name": "India"
+		},
+		{
+			"link": "/world",
+			"name": "World"
+		},
+		{
+			"link": "/business",
+			"name": "Business"
+		},
+		{
+			"link": "/entertainment",
+			"name": "Entertainment"
+		},
+		{
+			"link": "/sports",
+			"name": "Sports"
+		},
+		{
+			"link": "/health",
+			"name": "Health"
+		},
+		{
+			"link": "/science",
+			"name": "Science"
+		}
+	]
+}

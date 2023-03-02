@@ -1,13 +1,38 @@
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Header, NewsPageHeroSection } from '../components';
+import {
+	Footer,
+	Header,
+	NewsContainer,
+	NewsPageHeroSection,
+} from '../components';
+
+import { data } from '../content/data.json';
+
+import NotFoundPage from './NotFoundPage';
 
 const NewsPage = () => {
 	const { newsId } = useParams();
+	const [isAvail, setIsAvail] = useState(false);
+
+	useEffect(() => {
+		let check = (obj) => obj.name.toLowerCase() === newsId.toLowerCase();
+		setIsAvail(data.some(check));
+	}, []);
 
 	return (
-		<div className="Newspage">
+		<div className="Newspage min-h-screen flex flex-col justify-between">
 			<Header />
-			<NewsPageHeroSection newsId={newsId} />
+
+			{isAvail ? (
+				<>
+					<NewsPageHeroSection newsId={newsId} />
+					<NewsContainer />
+				</>
+			) : (
+				<NotFoundPage />
+			)}
+			<Footer />
 		</div>
 	);
 };
