@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Loader, WeatherCard } from './';
+import { Loader, WeatherCard } from '..';
 
 function BreakingNewsSection() {
 	const [weatherData, setWeatherData] = useState(null);

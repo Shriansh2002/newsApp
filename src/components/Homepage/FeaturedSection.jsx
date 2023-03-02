@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Loader from './Loader';
+import Loader from '../global/Loader';
 
 const FeaturedSection = ({ content }) => {
 	const [newsTitles, setNewsTitles] = useState([]);

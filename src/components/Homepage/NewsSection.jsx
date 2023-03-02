@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { LatestNewsTopSection, Loader, NewsCard } from './';
+import { LatestNewsTopSection, Loader, NewsCard } from '..';
 
 const NewsSection = () => {
 	const [newsData, setNewsData] = useState([]);
