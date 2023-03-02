@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { LatestNewsTopSection, NewsCard } from './';
+import { LatestNewsTopSection, Loader, NewsCard } from './';
 
 const NewsSection = () => {
 	const [newsData, setNewsData] = useState([]);
@@ -24,9 +24,7 @@ const NewsSection = () => {
 				<h2 className="text-3xl font-bold mb-8">Latest News</h2>
 				<LatestNewsTopSection />
 				{isLoading ? (
-					<p className="text-center text-gray-500 mt-20">
-						Loading...
-					</p>
+					<Loader />
 				) : (
 					<div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
 						{newsData.map((article, _idx) => (

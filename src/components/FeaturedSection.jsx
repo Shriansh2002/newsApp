@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Loader from './Loader';
 
 const FeaturedSection = ({ content }) => {
 	const [newsTitles, setNewsTitles] = useState([]);
@@ -22,7 +23,7 @@ const FeaturedSection = ({ content }) => {
 		<div className="bg-white py-8">
 			<>
 				{isLoading ? (
-					<p className="text-center text-gray-500">Loading...</p>
+					<Loader />
 				) : (
 					<>
 						{newsTitles.length === 0 ? null : (

@@ -6,3 +6,4 @@ export { default as LatestNewsTopSection } from './LatestNewsTopSection';
 export { default as NewsCard } from './NewsCard';
 export { default as WeatherCard } from './WeatherCard';
 export { default as Footer } from './Footer';
+export { default as Loader } from './Loader';

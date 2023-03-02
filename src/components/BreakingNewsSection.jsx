@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { WeatherCard } from './';
+import { Loader, WeatherCard } from './';
 
 function BreakingNewsSection() {
 	const [weatherData, setWeatherData] = useState(null);
@@ -46,7 +46,7 @@ function BreakingNewsSection() {
 						description={weatherData.description}
 					/>
 				) : (
-					<p>Loading...</p>
+					<Loader />
 				)}
 			</div>
 		</section>
