@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {
@@ -27,7 +28,7 @@ const NewsPage = () => {
 			{isAvail ? (
 				<>
 					<NewsPageHeroSection newsId={newsId} />
-					<NewsContainer />
+					<NewsContainer newsId={newsId} />
 				</>
 			) : (
 				<NotFoundPage />
