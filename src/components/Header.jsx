@@ -46,7 +46,7 @@ function Header() {
 						<img
 							src="/logo.png"
 							alt="Zee News logo"
-							className="w-24"
+							className="w-14"
 						/>
 					</a>
 					<ul className="hidden md:flex items-center ml-4">
